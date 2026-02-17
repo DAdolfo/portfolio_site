@@ -1,0 +1,48 @@
+---
+const { title, date, place, description, listItems, image, name, ref } =
+  Astro.props;
+---
+
+<div class="card">
+  <h3>{title}</h3>
+  <h4>{date} | {place}</h4>
+  <p>{description}</p>
+  <a href={ref}> <img src={image} alt={name} /> </a>
+  <ul>
+    {listItems && listItems.map((item) => <li>{item}</li>)}
+  </ul>
+</div>
+
+<style>
+  .card {
+    background-color: var(--nice-gray);
+    border: 2px solid var(--primary-color);
+    border-radius: 0 1em 0 1em;
+    width: 80lh;
+    height: relative;
+    position: relative;
+  }
+  .card h3,
+  h4,
+  p {
+    margin: 1rem;
+    margin-right: 1rem;
+  }
+
+  .card p {
+    text-decoration: underline;
+  }
+
+  .card ul {
+    font-size: 1.1rem;
+  }
+
+  .card img {
+    position: absolute;
+    top: 0.1rem;
+    right: 1em;
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    height: 6rem;
+    width: 12rem;
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+const { skills } = Astro.props;
+---
+
+<div class="skills_card">
+  <ul>
+    {skills && skills.map((item) => <li>{item}</li>)}
+  </ul>
+</div>
+
+<style>
+  .skills_card {
+    background-color: var(--nice-gray);
+    border: 2px solid var(--primary-color);
+    border-radius: 0 1em 0 1em;
+    width: 60lh;
+  }
+
+  .skills_card ul {
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+</style>

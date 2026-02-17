@@ -1,0 +1,84 @@
+:root {
+    --primary-color: #457b9d;
+    --secondary-color: #1d3557;
+    --title-color: #a8dadc;
+    --text-color: #fdfdfd;
+    --background-color: #283618; 
+    --nice-gray: rgb(52, 53, 58);
+}
+
+.roboto-mystyle {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    margin: 0;
+}
+
+.section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__container h1 {
+    font-size: 3em;
+}
+
+.section__container h2 {
+    font-size: 2.5em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+
+.section__container h3 {
+    font-size: 1.75em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+
+.section__container h4 {
+    font-size: 1em;
+    font-weight: 100;
+    color: whitesmoke;
+}
+
+.section__container p {
+    font-size: 1.5em;
+}
+
+.nav__bar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    width: 100%;
+    height: 80px;
+    border-bottom: 3px solid white;
+}
+
+.nav__bar ul{
+    height: 80px;
+    margin-top: 0;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.nav__bar li{
+    display: inline-block;
+    padding: 2em 1em;
+    height: 80px;
+}
+
+.nav__links {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.nav__bar li:hover, .nav__bar li:focus{
+    background-color: var(--secondary-color);
+}
