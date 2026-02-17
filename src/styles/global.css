@@ -4,18 +4,17 @@
     --title-color: #a8dadc;
     --text-color: #fdfdfd;
     --background-color: #283618; 
+    --nice-gray: rgb(52, 53, 58);
 }
 
 .roboto-mystyle {
-    font-family: "Roboto", sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
     margin: 0;
-    background-color: var(--background-color);
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .section__container {
@@ -24,19 +23,40 @@
     align-items: center;
 }
 
-.section__p{
-    padding: 8px;
-    margin: 20px;
+.section__container h1 {
+    font-size: 3em;
+}
+
+.section__container h2 {
+    font-size: 2.5em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+
+.section__container h3 {
+    font-size: 1.75em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+
+.section__container h4 {
+    font-size: 1em;
+    font-weight: 100;
+    color: whitesmoke;
+}
+
+.section__container p {
+    font-size: 1.5em;
 }
 
 .nav__bar{
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
-    background-color: var(--secondary-color);
+    background-color: black;
     width: 100%;
     height: 80px;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid white;
 }
 
 .nav__bar ul{

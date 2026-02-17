@@ -1,0 +1,29 @@
+---
+const { title, link, image } = Astro.props;
+---
+
+<div class="project_card">
+  <a href={link}><img src={image} /></a>
+  <h3>{title}</h3>
+</div>
+
+<style>
+  .project_card {
+    background-color: var(--nice-gray);
+    border: 1px solid white;
+    height: relative;
+    position: relative;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project_card img {
+    height: 80%;
+    width: 100%;
+  }
+
+  .project_card h3 {
+    text-align: center;
+  }
+</style>

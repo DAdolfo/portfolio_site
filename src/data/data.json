@@ -1,0 +1,42 @@
+{
+    "experience" : [
+    {
+        "title": "Technical Support Engineer at Foursquare",
+        "image": "/fsq.svg",
+        "name": "FSQ",
+        "ref": "https://www.foursquare.com",
+        "date": "June 2023 - Present",
+        "place": "Belgrade, Serbia",
+        "description": "Technical Support & Tool Developing",
+        "listItems": ["Providing technical support for AWS-based marketing products, including investigating issues, troubleshooting, and developing automation scripts to resolve client-facing challenges.",
+    "Guiding multiple B2B customers through onboarding and deployment processes by simplifying technical workflows and ensuring seamless adoption of our products.",
+    "Collaborating in client-facing meetings to translate technical concepts into actionable steps, helping non-technical stakeholders make decisions based on technical translated knowledge.",
+    "Building and maintaining technical documentation and enabling faster knowledge transfer across internal and external teams.",
+    "Automating repetitive support processes, reducing operational overhead and enabling client-facing teams to focus on revenue and customer success tasks during their working day."]
+    },
+    {
+        "title": "AutoPay CX Analyst at NCR",
+        "image": "/ncr.svg",
+        "name": "NCR",
+        "ref": "https://www.ncr.com",
+        "date": "April 2023 - June 2023",
+        "place": "Belgrade, Serbia",
+        "description": "SMB Payment coordination and Progress Reporting",
+        "listItems": ["Delivered onboarding and support for SMB clients, resolving billing and payment issues while ensuring a positive early customer experience.",
+    "Produced weekly trend reports and actionable insights, optimizing workflows and enabling data-driven improvements in client engagement.",
+    "Authored documentation that standardized processes across global teams, ensuring consistent client communication and efficient support handoffs."]
+    },
+    {
+        "title": "Fire Protection Design Engineer at ETS",
+        "image": "/ets.png",
+        "name": "ETS",
+        "ref": "https://www.ets.com.gt",
+        "date": "September 2021 - September 2022",
+        "place": "Guatemala City, Guatemala",
+        "description": "Designing Hydraulic and Electronic Fire Protection systems for Industrial Businesses",
+        "listItems": ["Managed 50+ client design projects, guiding customers through project requirements and ensuring regulatory compliance from design to delivery.",
+    "Translated complex technical and regulatory requirements into accessible guidelines that supported client onboarding and adoption of new systems.",
+    "Authored reference material and compliance documentation, improving client understanding and accelerating implementation timelines."]
+    }
+]
+}

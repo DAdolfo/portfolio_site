@@ -1,14 +1,42 @@
 ---
-
+import Card from "./Card.astro";
+import data from "../data/data.json";
+const experiences = data.experience;
 ---
 
 <section class="section__container" id="experience">
-  <h1>Experience</h1>
-  <ul>
-    <li>Foursquare</li>
-    <li>NCR</li>
-    <li>Transcom</li>
-    <li>Extinction Total Systems</li>
-    <li>Fat Cat Café</li>
-  </ul>
+  <h1>Here is where I got most of my experience</h1>
+
+  <div class="cards-wrapper">
+    {
+      experiences.map((job) => (
+        <Card
+          title={job.title}
+          image={job.image}
+          name={job.name}
+          ref={job.ref}
+          date={job.date}
+          place={job.place}
+          description={job.description}
+          listItems={job.listItems}
+        />
+      ))
+    }
+  </div>
 </section>
+
+<style>
+  .section__container {
+    background-color: var(--secondary-color);
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+</style>

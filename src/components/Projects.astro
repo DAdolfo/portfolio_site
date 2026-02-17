@@ -1,12 +1,31 @@
 ---
-
+import Card from "./Project_card.astro";
+import data from "../data/projects.json";
+const projects = data.projects;
 ---
 
 <section class="section__container" id="projects">
   <h1>Projects</h1>
-  <ul>
-    <li>Data Pipeline</li>
-    <li>House Market Analysis</li>
-    <li>Car price analysis</li>
-  </ul>
+  <div class="card-wrapper">
+    {
+      projects.map((proj) => (
+        <Card image={proj.image} link={proj.link} title={proj.title} />
+      ))
+    }
+  </div>
 </section>
+
+<style>
+  .section__container {
+    background-color: var(--secondary-color);
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+</style>

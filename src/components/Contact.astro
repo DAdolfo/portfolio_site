@@ -4,8 +4,25 @@
 
 <section class="section__container" id="contact">
   <h1>Contact me</h1>
-  <p>
-    Email: ja09aguilar@gmail.com <br />
-    Phone Number: +381 611608800
-  </p>
+  <div class="contact__links">
+    <a href="https://www.linkedin.com/in/jadolfo/">LinkedIn</a>
+    <a href="https://github.com/DAdolfo">Github</a>
+    <a href="mailto:ja09aguilar@gmail.com">Email</a>
+  </div>
 </section>
+
+<style>
+  .section__container {
+    background-color: var(--nice-gray);
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact__links a {
+    font-size: 3rem;
+    color: whitesmoke;
+    padding: 2rem;
+  }
+</style>

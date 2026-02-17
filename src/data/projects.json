@@ -1,0 +1,14 @@
+{
+    "projects" : [
+        {
+            "title": "E-Commerce Data Pipeline in AWS",
+            "image": "/pipeline.jpg",
+            "link": "https://github.com/DAdolfo/data_portfolio"
+        },
+        {
+            "title": "Car Market Analysis",
+            "image": "/car.jpg",
+            "link": "https://medium.com/@ja09aguilar/sql-power-bi-wise-car-purchase-e8ca7f84c18c"
+        }
+    ]
+}
