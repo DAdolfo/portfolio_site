@@ -1,13 +1,13 @@
 {
     "experience" : [
     {
-        "title": "Technical Support Engineer at Foursquare",
+        "title": "Technical Support Engineer",
         "image": "/fsq.svg",
         "name": "FSQ",
         "ref": "https://www.foursquare.com",
         "date": "June 2023 - Present",
         "place": "Belgrade, Serbia",
-        "description": "Technical Support & Tool Developing",
+        "description": "Technical Support & Internal Tools Development",
         "listItems": ["Providing technical support for AWS-based marketing products, including investigating issues, troubleshooting, and developing automation scripts to resolve client-facing challenges.",
     "Guiding multiple B2B customers through onboarding and deployment processes by simplifying technical workflows and ensuring seamless adoption of our products.",
     "Collaborating in client-facing meetings to translate technical concepts into actionable steps, helping non-technical stakeholders make decisions based on technical translated knowledge.",
@@ -15,7 +15,7 @@
     "Automating repetitive support processes, reducing operational overhead and enabling client-facing teams to focus on revenue and customer success tasks during their working day."]
     },
     {
-        "title": "AutoPay CX Analyst at NCR",
+        "title": "AutoPay CX Analyst",
         "image": "/ncr.svg",
         "name": "NCR",
         "ref": "https://www.ncr.com",
@@ -27,7 +27,7 @@
     "Authored documentation that standardized processes across global teams, ensuring consistent client communication and efficient support handoffs."]
     },
     {
-        "title": "Fire Protection Design Engineer at ETS",
+        "title": "Fire Protection Design Engineer",
         "image": "/ets.png",
         "name": "ETS",
         "ref": "https://www.ets.com.gt",
