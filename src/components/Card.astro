@@ -4,10 +4,10 @@ const { title, date, place, description, listItems, image, name, ref } =
 ---
 
 <div class="card">
+  <a href={ref}> <img src={image} alt={name} /> </a>
   <h3>{title}</h3>
   <h4>{date} | {place}</h4>
   <p>{description}</p>
-  <a href={ref}> <img src={image} alt={name} /> </a>
   <ul>
     {listItems && listItems.map((item) => <li>{item}</li>)}
   </ul>
@@ -18,15 +18,62 @@ const { title, date, place, description, listItems, image, name, ref } =
     background-color: var(--nice-gray);
     border: 2px solid var(--primary-color);
     border-radius: 0 1em 0 1em;
-    width: 80lh;
+    width: 95%%;
     height: relative;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
-  .card h3,
-  h4,
-  p {
+
+  .card h3 {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    font-weight: 100;
+    color: var(--title-color);
+    margin: 0;
+    padding-left: 1rem;
+
+    @media (width >= 640px) {
+      font-size: 2rem;
+    }
+
+    @media (width >= 960px) {
+      font-size: 2.75rem;
+    }
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-weight: 100;
+    color: var(--text-color);
     margin: 1rem;
+    padding-left: 0.8rem;
+
+    @media (width >= 640px) {
+      font-size: 1.5rem;
+    }
+
+    @media (width >= 960px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .card p {
+    font-size: 1.2rem;
     margin-right: 1rem;
+    font-weight: 100;
+    color: var(--text-color);
+    margin: 0;
+    padding-right: 0.75rem;
+
+    @media (width >= 640px) {
+      font-size: 1.5rem;
+    }
+
+    @media (width >= 960px) {
+      font-size: 1.75rem;
+    }
   }
 
   .card p {
@@ -34,14 +81,24 @@ const { title, date, place, description, listItems, image, name, ref } =
   }
 
   .card ul {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding-right: 1rem;
+
+    @media (width >= 640px) {
+      font-size: 1.1rem;
+    }
+
+    @media (width >= 960px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .card ul li {
+    margin-bottom: 0.5rem;
   }
 
   .card img {
-    position: absolute;
-    top: 0.1rem;
-    right: 1em;
-    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    padding-left: 1rem;
     height: 6rem;
     width: 12rem;
   }

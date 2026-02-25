@@ -13,13 +13,22 @@ const { skills } = Astro.props;
     background-color: var(--nice-gray);
     border: 2px solid var(--primary-color);
     border-radius: 0 1em 0 1em;
-    width: 60lh;
+    width: 85%;
   }
 
   .skills_card ul {
     font-size: 1.3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-left: 0.5rem;
+
+    @media (width >= 640px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (width >= 960px) {
+      font-size: 1.75rem;
+    }
   }
 </style>

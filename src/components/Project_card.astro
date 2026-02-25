@@ -16,6 +16,11 @@ const { title, link, image } = Astro.props;
     display: flexbox;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0.75rem;
+
+    @media (width >= 960px) {
+      padding-bottom: 1rem;
+    }
   }
 
   .project_card img {
@@ -24,6 +29,15 @@ const { title, link, image } = Astro.props;
   }
 
   .project_card h3 {
+    font-size: 1.3rem;
     text-align: center;
+
+    @media (width >= 640px) {
+      font-size: 1.1rem;
+    }
+
+    @media (width >= 960px) {
+      font-size: 1.6rem;
+    }
   }
 </style>
