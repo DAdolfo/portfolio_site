@@ -3,7 +3,7 @@ const { title, link, image } = Astro.props;
 ---
 
 <div class="project_card">
-  <a href={link}><img src={image} /></a>
+  <a href={link} target="_blank" rel="noopener noreferrer"><img src={image} /></a>
   <h3>{title}</h3>
 </div>
 
@@ -29,15 +29,17 @@ const { title, link, image } = Astro.props;
   }
 
   .project_card h3 {
-    font-size: 1.3rem;
+    font-size: 1.1em;
     text-align: center;
 
     @media (width >= 640px) {
       font-size: 1.1rem;
+      padding-bottom: 1rem;
     }
 
     @media (width >= 960px) {
       font-size: 1.6rem;
+      padding-bottom: 1rem;
     }
   }
 </style>

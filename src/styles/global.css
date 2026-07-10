@@ -31,6 +31,15 @@
     border-bottom: 3px solid white;
 }
 
+.nav__title {
+    display: none; 
+    color: var(--text-color, white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-self: center;
+    padding-left: 1.5em;
+}
+
 .nav__bar ul{
     height: 80px;
     margin-top: 0;
@@ -41,7 +50,7 @@
 }
 
 .nav__bar li{
-    display: inline-block;
+    display: inline;
     padding: 2em 1em;
     height: 80px;
 }
@@ -72,6 +81,7 @@
 
 h1 {
     font-size: 2.5rem;
+    text-align: center;
 
     @media (width >= 640px) {
     font-size: 3.5rem;
@@ -138,5 +148,25 @@ p {
     @media (width >= 960px) {
     font-size: 1.5rem;
     }
+
+}
+
+/* This applies only to mobile screens (widths under 768px) */
+@media (max-width: 768px) {
+
+    .nav__title {
+    display: block;
+    color: var(white);
+    font-weight: lighter;
+    font-size: 1.2rem;
+    align-self: center;
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+    }
+
+    .nav__bar ul {
+        display: none;
+    }
+
 
 }

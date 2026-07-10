@@ -1,0 +1,16 @@
+{
+    "skills_2" : [
+        {
+            "title" : "AI assisted Troubleshooting",
+            "body" : "Alongside with the experience that comes along with working with a product, comes the complexity of the multiple systems that constitute it. When an issue arises, there is usually a breadcrumb trail to follow, and this trail will jump from system to system until the root of the issue is found. The more complex a product is, the more differences that will exist between systems in it and the familiarity with them decreases, that’s why in an ambiguous troubleshooting a Support Engineer should have a significant level of knowledge of each system when using AI to go through them. For example, tools like Deductive for EMR or Claude are key tools for expediting the exploration of logs."
+        },
+        {
+            "title" : "Customer-facing Communication",
+            "body" : "I believe that the start of proper support starts with the right communication combined with the proper technical knowledge, bringing the ease of the translation from technical problems/situations into easy-to-digest scenarios for the stakeholders in each situation. This also conveys creating the proper expectations of the timeline an issue will be investigated, worked on and finally solved. All while taking care of the relationships built with either internal or external clients."
+        },
+        {
+            "title" : "System-level thinking",
+            "body" : "Heavily connected with the technical translation of issues, when a problem is reported by non-technical users one must think on how the problem has come to be and where in the system things could have gone wrong. Familiarity with the stack that the product runs on is key to this kind of thinking, being able not just to follow a trail linearly but also across different layers that run at the same time. Breaking down a problem into smaller parts one can easily check will always lead to the root cause."
+        }
+    ]
+}

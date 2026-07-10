@@ -1,7 +1,10 @@
 ---
 import Card from "./Skills_card.astro";
+import Card2 from "./Skill2_card.astro";
 import data from "../data/skills.json";
+import data2 from "../data/skills_2.json";
 const skills = data.skills;
+const skills2 = data2.skills_2;
 ---
 
 <section class="section__container" id="skills">
@@ -9,6 +12,18 @@ const skills = data.skills;
   <div class="card-wrapper">
     <Card skills={skills} />
   </div>
+
+  <div class="cards-wrapper2">
+    {
+      skills2.map((item) => (
+        <Card2
+          title={item.title}
+          body={item.body}
+        />
+      ))
+    }
+  </div>
+
 </section>
 
 <style>
@@ -19,8 +34,18 @@ const skills = data.skills;
     padding-right: 50px;
     padding-bottom: 50px;
     align-items: center;
+    height: fit-content;
   }
   h1 {
     color: var(--secondary-color);
+  }
+
+  .cards-wrapper2 {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
   }
 </style>
