@@ -1,7 +1,7 @@
 {
     "projects" : [
         {
-            "title": "E-Commerce Data Pipeline in AWS (WIP)",
+            "title": "E-Commerce Ingestion Data Pipeline in AWS",
             "image": "/pipeline.jpg",
             "link": "https://github.com/DAdolfo/data_portfolio"
         },
