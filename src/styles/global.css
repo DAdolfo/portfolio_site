@@ -6,63 +6,118 @@
     --primary-color: #457b9d;
     --secondary-color: #1d3557;
     --title-color: #a8dadc;
-    --text-color: #fdfdfd;
+    --text-color: #f1faee;
     --background-color: #283618; 
-    --nice-gray: rgb(52, 53, 58);
+    --nice-gray: rgb(30, 32, 38);
+    --card-border: rgba(69, 123, 157, 0.4);
+    --nav-bg: rgba(10, 12, 20, 0.95);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.15);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+    --transition-base: 0.3s ease;
 }
 
-.roboto-mystyle {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
     margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
+
 
 .nav__bar{
     position: fixed;
     top: 0;
-    z-index: 1;
-    background-color: black;
+    z-index: 100;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(12px);
     width: 100%;
-    height: 80px;
-    border-bottom: 3px solid white;
+    height: 70px;
+    border-bottom: 1px solid rgba(168, 218, 220, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: box-shadow var(--transition-base);
+    box-shadow: var(--shadow-sm);
 }
 
 .nav__title {
-    display: none; 
     color: var(--text-color, white);
-    font-weight: bold;
-    font-size: 1.2rem;
-    align-self: center;
+    font-weight: 500;
+    font-size: 1.1rem;
     padding-left: 1.5em;
+    letter-spacing: 0.02em;
 }
 
 .nav__bar ul{
-    height: 80px;
-    margin-top: 0;
+    height: 70px;
+    margin: 0;
     display: flex;
     padding: 0;
     flex-direction: row;
-    justify-content: end;
+    align-items: center;
+    list-style: none;
 }
 
 .nav__bar li{
     display: inline;
-    padding: 2em 1em;
-    height: 80px;
+    padding: 0 1.2em;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    transition: background-color var(--transition-base);
+    border-radius: 4px;
 }
 
 .nav__links {
     text-decoration: none;
-    color: var(--text-color)
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    transition: opacity var(--transition-base);
+
 }
 
-.nav__bar li:hover, .nav__bar li:focus{
-    background-color: var(--secondary-color);
+.nav__links:hover {
+    opacity: 1;
 }
+
+
+.nav__bar li:hover, .nav__bar li:focus-within{
+    background-color: rgba(69, 123, 157, 0.2);
+}
+
+/* Hamburger menu */
+.nav__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 1em 1.5em;
+    background: none;
+    border: none;
+    z-index: 101;
+}
+
+.nav__hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
 
 /* Media Queries */
 
@@ -72,6 +127,7 @@
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    padding-top: 70px;
 
     @media (width >= 960px) {
     height: 100vh;
@@ -80,37 +136,23 @@
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
-
+    font-weight: 600;
+    letter-spacing: -0.01em;
     @media (width >= 640px) {
-    font-size: 3.5rem;
+    font-size: 3rem;
     }
 
     @media (width >= 960px) {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
     }
 
 }
 
 h2 {
-    font-size: 1.5rem;
-    font-weight: 100;
-    color: var(--text-color);
-
-    @media (width >= 640px) {
-    font-size: 2.5rem;
-    }
-
-    @media (width >= 960px) {
-    font-size: 4rem;
-    }
-
-}
-
-h3 {
-    font-size: 1.2rem;
-    font-weight: 100;
+    font-size: 1.4rem;
+    font-weight: 300;
     color: var(--text-color);
 
     @media (width >= 640px) {
@@ -118,55 +160,90 @@ h3 {
     }
 
     @media (width >= 960px) {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    }
+
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-color);
+
+    @media (width >= 640px) {
+    font-size: 1.6rem;
+    }
+
+    @media (width >= 960px) {
+    font-size: 2.2rem;
     }
 
 }
 
 h4 {
-    font-size: 1.5rem;
-    font-weight: 100;
-
-    @media (width >= 640px) {
-    font-size: 1.8rem;
-    }
-
-    @media (width >= 960px) {
-    font-size: 3rem;
-    }
-
-}
-
-p {
     font-size: 1.1rem;
-    font-weight: 100;
+    font-weight: 300;
 
     @media (width >= 640px) {
     font-size: 1.4rem;
     }
 
     @media (width >= 960px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    }
+
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+
+    @media (width >= 640px) {
+    font-size: 1.15rem;
+    }
+
+    @media (width >= 960px) {
+    font-size: 1.25rem;
     }
 
 }
 
 /* This applies only to mobile screens (widths under 768px) */
 @media (max-width: 768px) {
-
-    .nav__title {
-    display: block;
-    color: var(white);
-    font-weight: lighter;
-    font-size: 1.2rem;
-    align-self: center;
-    padding-left: 1.5em;
-    padding-top: 1.5em;
+    .nav__hamburger {
+        display: flex;
     }
 
     .nav__bar ul {
-        display: none;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 70%;
+        max-width: 280px;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(12px);
+        border-left: 1px solid rgba(168, 218, 220, 0.1);
+        transition: right var(--transition-base);
+        box-shadow: -4px 0 16px rgba(0,0,0,0.3);
     }
 
+    .nav__bar ul.nav--open {
+        right: 0;
+    }
 
+    .nav__bar li {
+        padding: 1rem 2rem;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .nav__links {
+        font-size: 1.1rem;
+    }
 }

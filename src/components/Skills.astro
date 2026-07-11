@@ -8,7 +8,7 @@ const skills2 = data2.skills_2;
 ---
 
 <section class="section__container" id="skills">
-  <h1>And these are the main tools in my toolbelt</h1>
+  <h1>Skills & Tools</h1>
   <div class="card-wrapper">
     <Card skills={skills} />
   </div>
@@ -29,23 +29,26 @@ const skills2 = data2.skills_2;
 <style>
   .section__container {
     background-color: var(--primary-color);
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    padding: 5rem 2rem;
     align-items: center;
     height: fit-content;
   }
   h1 {
     color: var(--secondary-color);
+    margin-bottom: 2rem;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 2rem;
   }
 
   .cards-wrapper2 {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 90%;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
   }
 </style>

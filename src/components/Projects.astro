@@ -18,24 +18,25 @@ const projects = data.projects;
 <style>
   .section__container {
     background-color: var(--secondary-color);
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    padding: 5rem 2rem;
     height: fit-content;
   }
+
+    h1 {
+    margin-bottom: 2rem;
+  }
+
 
   .card-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+
 
     @media (width >= 640px) {
       grid-template-columns: 1fr 1fr;
-    }
-
-    @media (width >= 960px) {
-      font-size: 1.75rem;
     }
   }
 </style>
